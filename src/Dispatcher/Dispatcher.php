@@ -36,6 +36,7 @@ class Dispatcher extends AbstractModuleDispatcher
     {
         $data = parent::getLayoutData();
         $phoneNumber = $data['params']->get('phonenumber');
+        $preFilledText = $data['params']->get('prefilledtext');
 
         $phoneNumberNoSpacesAndPlusses = str_replace([" ", "+"], "", $phoneNumber);
 
@@ -44,9 +45,11 @@ class Dispatcher extends AbstractModuleDispatcher
             $phoneNumberNoSpacesAndPlusses = ltrim($phoneNumberNoSpacesAndPlusses, '0');
         }
 
+        $preFilledText = base64_encode($preFilledText);
+
         $data['phonenumber'] = $phoneNumberNoSpacesAndPlusses;
         $data['countrycode'] = $data['params']->get('countrycode');
-        $data['prefilledtext'] = $data['params']->get('prefilledtext');
+        $data['prefilledtext'] = $preFilledText;
 
         return $data;
     }
