@@ -23,6 +23,13 @@
 		<fields name="params">
 			<fieldset name="advanced">
 				<field
+					name="phonenumber"
+					type="text"
+					label="MOD_ADMIN_CHAT_WHATSAPP_FIELD_PHONENUMBER_LABEL"
+					description="MOD_ADMIN_CHAT_WHATSAPP_FIELD_PHONENUMBER_DESC"
+					class="form-text"
+				/>
+				<field
 					name="layout"
 					type="modulelayout"
 					label="JFIELD_ALT_LAYOUT_LABEL"

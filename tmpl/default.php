@@ -24,9 +24,9 @@ if (in_array($module->position, ['icon', 'cpanel'])) {
     $buttons = [
         [
             'image' => 'yo-quicklink-cpanel',
-            'text' => 'YOOtheme',
+            'text' => 'Get help via WhatsApp',
             'link' => "index.php?option=com_ajax&templateStyle={$templ->id}&p=customizer&format=html",
-            'group' => Text::_('MOD_YOOTHEME_LINK_TEMPLATES'),
+            'group' => Text::_('MOD_ADMIN_CHAT_WHATSAPP'),
             'access' => ['core.edit', 'com_templates'],
         ],
     ];
@@ -35,7 +35,7 @@ if (in_array($module->position, ['icon', 'cpanel'])) {
 }
 
 if ($module->position === 'menu') {
-    MenusHelper::addPreset('yootheme', 'YOOtheme', __DIR__ . '/../presets/yootheme.xml');
+    MenusHelper::addPreset('admin_chat_whatsapp', 'Whatsapp Chat', __DIR__ . '/../presets/yootheme.xml');
 
     $enabled = !$app->getInput()->getBool('hidemainmenu');
 

@@ -34,11 +34,14 @@ class Dispatcher extends AbstractModuleDispatcher
     {
         $data = parent::getLayoutData();
 
-        // Get the component title div
-        // @deprecated 5.2.0 will be removed in 7.0 as this property is not used anymore see WebApplication
-        if (isset($this->getApplication()->JComponentTitle)) {
-            $data['title'] = $this->getApplication()->JComponentTitle;
+        // Get the phone number from the component's configuration
+        $params = ModuleHelper::getParams('mod_admin_chat_whatsapp');
+        $phoneNumber = $params->get('phonenumber', 'default_phone_number');
+
+        if ($phoneNumber) {
+            $data['phonenumber'] = $phoneNumber;
         }
+
 
         return $data;
     }
