@@ -15,8 +15,6 @@ defined('_JEXEC') or die;
 
 use Joomla\CMS\Helper\ModuleHelper;
 use Joomla\CMS\Language\Text;
-use Joomla\Component\Menus\Administrator\Helper\MenusHelper;
-use Joomla\Module\Menu\Administrator\Menu\CssMenu;
 
 defined('_JEXEC') or die();
 
