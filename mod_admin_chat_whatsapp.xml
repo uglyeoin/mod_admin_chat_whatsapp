@@ -235,6 +235,13 @@
                     <option value="996">Kyrgyzstan (+996)</option>
                     <option value="998">Uzbekistan (+998)</option>
                 </field>
+				<field
+					name="phonenumber"
+					type="text"
+					label="MOD_ADMIN_CHAT_WHATSAPP_FIELD_PHONENUMBER_LABEL"
+					description="MOD_ADMIN_CHAT_WHATSAPP_FIELD_PHONENUMBER_DESC"
+					class="form-text"
+				/>				
 			</fieldset>
 			<fieldset name="advanced">
 				<field
