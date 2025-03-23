@@ -9,9 +9,6 @@
  */
 
 defined('_JEXEC') or die;
-?>
-
-<?php
 
 use Joomla\CMS\Language\Text;
 

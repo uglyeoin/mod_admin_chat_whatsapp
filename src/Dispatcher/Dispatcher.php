@@ -37,12 +37,9 @@ class Dispatcher extends AbstractModuleDispatcher
         $data = parent::getLayoutData();
         $phoneNumber = $data['params']->get('phonenumber');
 
-        $phoneNumber = preg_replace("\+", "", $phoneNumber);
-        $phoneNumber = preg_replace(" ", "", $phoneNumber);
+        $phoneNumberNoSpacesAndPlusses = str_replace([" ", "+"], "", $phoneNumber);
 
-        if ($phoneNumber) {
-            $data['phonenumber'] = $phoneNumber;
-        }
+        $data['phonenumber'] = $phoneNumberNoSpacesAndPlusses;
 
         return $data;
     }
