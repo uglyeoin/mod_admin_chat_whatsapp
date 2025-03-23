@@ -7,7 +7,7 @@
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
 	<authorEmail>eoin@squareballoon.co.uk</authorEmail>
 	<authorUrl>www.squareballoon.co.uk</authorUrl>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<description>MOD_ADMIN_CHAT_WHATSAPP_XML_DESCRIPTION</description>
 	<namespace path="src">Joomla\Module\AdminChatWhatsapp</namespace>
 	<files>
