@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="module" client="administrator" method="upgrade">
+	<name>mod_admin_chat_whatsapp</name>
+	<author>Eoin Oliver</author>
+	<creationDate>2025</creationDate>
+	<copyright>(C) 2025 Eoin Oliver</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>eoin@squareballoon.co.uk</authorEmail>
+	<authorUrl>www.squareballoon.co.uk</authorUrl>
+	<version>1.0.0</version>
+	<description>MOD_ADMIN_CHAT_WHATSAPP_XML_DESCRIPTION</description>
+	<namespace path="src">Joomla\Module\AdminChatWhatsapp</namespace>
+	<files>
+		<folder module="mod_admin_chat_whatsapp">services</folder>
+		<folder>src</folder>
+		<folder>tmpl</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/mod_admin_chat_whatsapp.ini</language>
+		<language tag="en-GB">language/en-GB/mod_admin_chat_whatsapp.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					class="form-select"
+					validate="moduleLayout"
+				/>
+
+				<field
+					name="moduleclass_sfx"
+					type="textarea"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					rows="3"
+					validate="CssIdentifier"
+				/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
