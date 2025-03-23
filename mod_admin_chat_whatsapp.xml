@@ -247,7 +247,7 @@
 					type="text"
 					label="MOD_ADMIN_CHAT_WHATSAPP_FIELD_PREFILLEDTEXT_LABEL"
 					description="MOD_ADMIN_CHAT_WHATSAPP_FIELD_PREFILLEDTEXT_DESC"
-                    default=""
+                    default="MOD_ADMIN_CHAT_WHATSAPP_PREFILLED_TEXT_DEFAULT"
 				/>
 			</fieldset>
 			<fieldset name="advanced">
