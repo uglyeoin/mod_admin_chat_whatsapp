@@ -23,6 +23,24 @@
 		<fields name="params">
 			<fieldset name="basic">
                 <field
+                    name="warningnote" 
+                    type="note" 
+                    default="" 
+                    label="MOD_ADMIN_CHAT_WHATSAPP_FIELD_WARNINGNOTE" 
+                    description=""
+                />
+                <field 
+                        name="businessorpersonal" 
+                        type="radio" 
+                        default="0" 
+                        label="Select an option" 
+                        description=""
+                        layout="joomla.form.field.radio.switcher"
+                        >
+                        <option value="0">MOD_ADMIN_CHAT_WHATSAPP_FIELD_BUSINESS_OR_PERSONAL_BUSINESS</option>
+                        <option value="1">MOD_ADMIN_CHAT_WHATSAPP_FIELD_BUSINESS_OR_PERSONAL_PERSONAL</option>
+                </field>                
+                <field
                     name="countrycode"
                     type="list"
                     label="MOD_ADMIN_CHAT_WHATSAPP_FIELD_COUNTRYCODE_LABEL"
