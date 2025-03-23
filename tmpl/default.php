@@ -15,8 +15,6 @@ defined('_JEXEC') or die;
 
 use Joomla\CMS\Language\Text;
 
-defined('_JEXEC') or die();
-
 if(!empty($phonenumber)) {
 ?>
     <a href="https://wa.me/<?php echo $phonenumber; ?>"><?php echo "<span class='me-1 fa-brands fa-whatsapp'></span>" . Text::_('MOD_ADMIN_CHAT_WHATSAPP_LINK_TEXT'); ?></a>
