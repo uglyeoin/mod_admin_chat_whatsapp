@@ -55,6 +55,7 @@ class Dispatcher extends AbstractModuleDispatcher
 
         $data['phonenumber'] = $phoneNumberNoSpacesAndPlusses;
         $data['countrycode'] = $data['params']->get('countrycode');
+        $data['businessorpersonal'] = $data['params']->get('businessorpersonal');
         $data['prefilledtext'] = $preFilledTextEncoded;
 
         return $data;
