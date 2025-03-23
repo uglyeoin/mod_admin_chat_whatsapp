@@ -13,6 +13,7 @@ namespace Joomla\Module\AdminChatWhatsapp\Administrator\Dispatcher;
 use Joomla\CMS\Dispatcher\AbstractModuleDispatcher;
 use Joomla\CMS\Helper\ModuleHelper;
 
+
 // phpcs:disable PSR1.Files.SideEffects
 \defined('_JEXEC') or die;
 // phpcs:enable PSR1.Files.SideEffects
@@ -34,10 +35,7 @@ class Dispatcher extends AbstractModuleDispatcher
     protected function getLayoutData()
     {
         $data = parent::getLayoutData();
-
-        // Get the phone number from the component's configuration
-        $params = ModuleHelper::getParams('mod_admin_chat_whatsapp');
-        $phoneNumber = $params->get('phonenumber', 'default_phone_number');
+        $phoneNumber = $data['params']->get('phonenumber');
 
         if ($phoneNumber) {
             $data['phonenumber'] = $phoneNumber;
