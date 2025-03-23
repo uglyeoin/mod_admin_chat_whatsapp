@@ -39,6 +39,11 @@ class Dispatcher extends AbstractModuleDispatcher
 
         $phoneNumberNoSpacesAndPlusses = str_replace([" ", "+"], "", $phoneNumber);
 
+        // Remove leading zero if present
+        if (substr($phoneNumberNoSpacesAndPlusses, 0, 1) === '0') {
+            $phoneNumberNoSpacesAndPlusses = ltrim($phoneNumberNoSpacesAndPlusses, '0');
+        }
+
         $data['phonenumber'] = $phoneNumberNoSpacesAndPlusses;
         $data['countrycode'] = $data['params']->get('countrycode');
 
