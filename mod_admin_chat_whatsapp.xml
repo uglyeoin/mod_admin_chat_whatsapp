@@ -29,6 +29,7 @@
                     description="MOD_ADMIN_CHAT_WHATSAPP_FIELD_COUNTRYCODE_DESC"
 					layout="joomla.form.field.list-fancy-select"
                 >
+                    <option value="">Please select a country code</option>
                     <option value="1">United States (+1)</option>
                     <option value="44">United Kingdom (+44)</option>
                     <option value="91">India (+91)</option>
