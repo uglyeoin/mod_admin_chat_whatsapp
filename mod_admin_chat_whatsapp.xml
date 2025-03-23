@@ -27,7 +27,7 @@
                     type="list"
                     label="MOD_ADMIN_CHAT_WHATSAPP_FIELD_COUNTRYCODE_LABEL"
                     description="MOD_ADMIN_CHAT_WHATSAPP_FIELD_COUNTRYCODE_DESC"
-                    class="form-select"
+					layout="joomla.form.field.list-fancy-select"
                 >
                     <option value="+1">United States (+1)</option>
                     <option value="+44">United Kingdom (+44)</option>
