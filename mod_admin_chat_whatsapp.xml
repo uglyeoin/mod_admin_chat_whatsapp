@@ -21,7 +21,7 @@
 	</languages>
 	<config>
 		<fields name="params">
-			<fieldset name="advanced">
+			<fieldset name="basic">
 				<field
 					name="phonenumber"
 					type="text"
@@ -29,6 +29,8 @@
 					description="MOD_ADMIN_CHAT_WHATSAPP_FIELD_PHONENUMBER_DESC"
 					class="form-text"
 				/>
+			</fieldset>
+			<fieldset name="advanced">
 				<field
 					name="layout"
 					type="modulelayout"

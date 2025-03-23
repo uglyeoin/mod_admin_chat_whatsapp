@@ -41,8 +41,8 @@ class Dispatcher extends AbstractModuleDispatcher
             $data['phonenumber'] = $phoneNumber;
         }
 
-        $phoneNumber = preg_replace("\+", "", $data);
-        $phoneNumber = preg_replace(" ", "", $data);
+        $phoneNumber = preg_replace("\+", "", $phoneNumber);
+        $phoneNumber = preg_replace(" ", "", $phoneNumber);
 
         return $data;
     }

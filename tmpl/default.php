@@ -13,7 +13,6 @@ defined('_JEXEC') or die;
 
 <?php
 
-use Joomla\CMS\Helper\ModuleHelper;
 use Joomla\CMS\Language\Text;
 
 defined('_JEXEC') or die();
