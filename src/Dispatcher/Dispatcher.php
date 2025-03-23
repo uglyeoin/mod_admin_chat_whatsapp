@@ -45,7 +45,7 @@ class Dispatcher extends AbstractModuleDispatcher
             $phoneNumberNoSpacesAndPlusses = ltrim($phoneNumberNoSpacesAndPlusses, '0');
         }
 
-        $preFilledTextEncoded = base64_encode($preFilledText);
+        $preFilledTextEncoded = urlencode($preFilledText);
 
         $data['phonenumber'] = $phoneNumberNoSpacesAndPlusses;
         $data['countrycode'] = $data['params']->get('countrycode');
