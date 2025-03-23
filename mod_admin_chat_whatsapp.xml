@@ -241,8 +241,13 @@
 					type="text"
 					label="MOD_ADMIN_CHAT_WHATSAPP_FIELD_PHONENUMBER_LABEL"
 					description="MOD_ADMIN_CHAT_WHATSAPP_FIELD_PHONENUMBER_DESC"
-					class="form-text"
-				/>				
+				/>
+				<field
+					name="prefilledtext"
+					type="text"
+					label="MOD_ADMIN_CHAT_WHATSAPP_FIELD_PREFILLEDTEXT_LABEL"
+					description="MOD_ADMIN_CHAT_WHATSAPP_FIELD_PREFILLEDTEXT_DESC"
+				/>
 			</fieldset>
 			<fieldset name="advanced">
 				<field
