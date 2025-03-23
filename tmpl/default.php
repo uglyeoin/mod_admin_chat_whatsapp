@@ -20,32 +20,6 @@ use Joomla\Module\Menu\Administrator\Menu\CssMenu;
 
 defined('_JEXEC') or die();
 
-if (in_array($module->position, ['icon', 'cpanel'])) {
-    $buttons = [
-        [
-            'image' => 'yo-quicklink-cpanel',
-            'text' => 'Get help via WhatsApp',
-            'link' => "index.php?option=com_ajax&templateStyle={$templ->id}&p=customizer&format=html",
-            'group' => Text::_('MOD_ADMIN_CHAT_WHATSAPP'),
-            'access' => ['core.edit', 'com_templates'],
-        ],
-    ];
-
-    require ModuleHelper::getLayoutPath('mod_quickicon');
-}
-
 if ($module->position === 'menu') {
-    MenusHelper::addPreset('admin_chat_whatsapp', 'Whatsapp Chat', __DIR__ . '/../presets/yootheme.xml');
-
-    $enabled = !$app->getInput()->getBool('hidemainmenu');
-
-    $menu = new CssMenu($app);
-    (fn() => ($this->enabled = $enabled))->bindTo($menu, $menu)();
-
-    $root = MenusHelper::loadPreset('yootheme');
-    $root->level = 0;
-
-    // Render the module layout
-    include ModuleHelper::getLayoutPath('mod_menu');
+    echo '<a href="https://wa.me/' . $data['phonenumber'] . '">' . Text::_('MOD_ADMIN_CHAT_WHATSAPP_LINK_TEXT') . '</a>';
 }
-
