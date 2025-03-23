@@ -43,6 +43,7 @@ class Dispatcher extends AbstractModuleDispatcher
         }
 
         $data = preg_replace("\+", "", $data);
+        $data = preg_replace(" ", "", $data);
 
         return $data;
     }
