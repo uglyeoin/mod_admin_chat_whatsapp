@@ -40,6 +40,7 @@ class Dispatcher extends AbstractModuleDispatcher
         $phoneNumberNoSpacesAndPlusses = str_replace([" ", "+"], "", $phoneNumber);
 
         $data['phonenumber'] = $phoneNumberNoSpacesAndPlusses;
+        $data['countrycode'] = $data['params']->get('countrycode');
 
         return $data;
     }
