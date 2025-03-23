@@ -11,6 +11,7 @@
 namespace Joomla\Module\AdminChatWhatsapp\Administrator\Dispatcher;
 
 use Joomla\CMS\Dispatcher\AbstractModuleDispatcher;
+use Joomla\CMS\Helper\ModuleHelper;
 
 // phpcs:disable PSR1.Files.SideEffects
 \defined('_JEXEC') or die;
