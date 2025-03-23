@@ -21,3 +21,5 @@ defined('_JEXEC') or die();
 if ($module->position === 'menu') {
     echo '<a href="https://wa.me/' . $data['phonenumber'] . '">' . Text::_('MOD_ADMIN_CHAT_WHATSAPP_LINK_TEXT') . '</a>';
 }
+
+// To do.  Remove + from entry sanitise.
