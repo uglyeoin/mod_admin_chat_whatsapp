@@ -12,6 +12,15 @@ defined('_JEXEC') or die;
 
 use Joomla\CMS\Language\Text;
 
+// Check the module position
+if ($module->position === 'menu') {
+    // Content for the 'menu' position
+    ?>
+    <ul id="menu12" class="nav flex-column main-nav metismenu">
+        <li class="item item-level-1">
+<?php } ?>
+
+<?php
 if(!empty($phonenumber) || !empty($countrycode)) {
     $prefilledTextOrNot = "";
 
@@ -20,7 +29,7 @@ if(!empty($phonenumber) || !empty($countrycode)) {
         $preffilledTextOrNot = $prefilledtext;
     }
 ?>
-    <a  href="https://wa.me/<?php echo $countrycode . $phonenumber . $prefilledtextOrNot; ?>" target="_blank">
+    <a  href="https://wa.me/<?php echo $countrycode . $phonenumber . $prefilledtextOrNot; ?>" target="_blank" class="nodropdown">
         <?php echo "<span class='me-1 fa-brands fa-whatsapp'></span>" . Text::_('MOD_ADMIN_CHAT_WHATSAPP_LINK_TEXT'); ?>
     </a>
 <?php
@@ -28,3 +37,11 @@ if(!empty($phonenumber) || !empty($countrycode)) {
 else {
     echo Text::_('MOD_ADMIN_CHAT_WHATSAPP_NO_PHONE_NUMBER_NOT_SET');
 }
+
+// Check the module position and close the list item
+if ($module->position === 'menu') {
+    // Content for the 'menu' position
+?>
+        </li>
+    </ul>
+<?php } ?>
