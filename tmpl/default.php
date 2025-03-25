@@ -30,7 +30,7 @@ if(!empty($phonenumber) || !empty($countrycode)) {
     }
 ?>
     <a  href="https://wa.me/<?php echo $countrycode . $phonenumber . $prefilledtextOrNot; ?>" target="_blank" class="nodropdown">
-        <?php echo "<span class='me-1 fa-brands fa-whatsapp'></span>" . Text::_('MOD_ADMIN_CHAT_WHATSAPP_LINK_TEXT'); ?>
+        <?php echo "<span class='me-1 fa-brands fa-whatsapp' aria-hidden='true'></span>" . Text::_('MOD_ADMIN_CHAT_WHATSAPP_LINK_TEXT'); ?>
     </a>
 <?php
 }
