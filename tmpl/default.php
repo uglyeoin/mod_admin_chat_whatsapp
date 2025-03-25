@@ -16,6 +16,7 @@ use Joomla\CMS\Language\Text;
 if ($module->position === 'menu') {
     // Content for the 'menu' position
     ?>
+<nav class="main-nav-container" aria-label="WhatsApp Menu">
     <ul id="whatsapp-click-to-chat" class="nav flex-column main-nav metismenu">
         <li class="item item-level-1">
 <?php } ?>
@@ -44,4 +45,5 @@ if ($module->position === 'menu') {
 ?>
         </li>
     </ul>
+</nav>
 <?php } ?>
