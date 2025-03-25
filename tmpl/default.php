@@ -16,7 +16,7 @@ use Joomla\CMS\Language\Text;
 if ($module->position === 'menu') {
     // Content for the 'menu' position
     ?>
-    <ul id="menu12" class="nav flex-column main-nav metismenu">
+    <ul id="whatsapp-click-to-chat" class="nav flex-column main-nav metismenu">
         <li class="item item-level-1">
 <?php } ?>
 
