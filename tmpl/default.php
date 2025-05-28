@@ -12,9 +12,9 @@ defined('_JEXEC') or die;
 
 use Joomla\CMS\Language\Text;
 
-// Check the module position
+
 if ($module->position === 'menu') {
-    // Content for the 'menu' position
+    // If menu position is assigned, then add additional nav code to keep consisten styling.
     ?>
 <nav class="main-nav-container" aria-label="WhatsApp Menu">
     <ul id="whatsapp-click-to-chat" class="nav flex-column main-nav metismenu">

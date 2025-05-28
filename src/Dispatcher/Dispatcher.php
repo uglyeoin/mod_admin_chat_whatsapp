@@ -8,7 +8,7 @@
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
-namespace Joomla\Module\AdminChatWhatsapp\Administrator\Dispatcher;
+namespace CodeAlongJug\Module\AdminChatWhatsapp\Administrator\Dispatcher;
 
 use Joomla\CMS\Dispatcher\AbstractModuleDispatcher;
 use Joomla\CMS\Helper\ModuleHelper;

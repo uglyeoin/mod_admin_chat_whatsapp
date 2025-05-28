@@ -9,7 +9,7 @@
 	<authorUrl>www.squareballoon.co.uk</authorUrl>
 	<version>1.0.1</version>
 	<description>MOD_ADMIN_CHAT_WHATSAPP_XML_DESCRIPTION</description>
-	<namespace path="src">Joomla\Module\AdminChatWhatsapp</namespace>
+	<namespace path="src">CodeAlongJug\Module\AdminChatWhatsapp</namespace>
 	<files>
 		<folder module="mod_admin_chat_whatsapp">services</folder>
 		<folder>src</folder>
