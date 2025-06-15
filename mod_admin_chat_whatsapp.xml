@@ -10,6 +10,10 @@
 	<version>1.0.1</version>
 	<description>MOD_ADMIN_CHAT_WHATSAPP_XML_DESCRIPTION</description>
 	<namespace path="src">CodeAlongJug\Module\AdminChatWhatsapp</namespace>
+    <updateservers>
+        <server type="extension" priority="1" name="Admin WhatsApp Chat updates">https://kindofuseful.com/index.php/component/swjprojects/jupdate?element=mod_admin_whatsapp_chat</server>
+    </updateservers>
+    <changelogurl>https://kindofuseful.com/index.php/component/swjprojects/jchangelog?element=mod_admin_whatsapp_chat</changelogurl>
 	<files>
 		<folder module="mod_admin_chat_whatsapp">services</folder>
 		<folder>src</folder>
