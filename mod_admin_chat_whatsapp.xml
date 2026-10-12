@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <extension type="module" client="administrator" method="upgrade">
 	<name>mod_admin_chat_whatsapp</name>
-	<author>Eoin Oliver</author>
-	<creationDate>2025</creationDate>
-	<copyright>(C) 2025 Eoin Oliver</copyright>
+	<author>Kind of Useful</author>
+	<creationDate>2026-10</creationDate>
+	<copyright>(C) 2025-2026 Kind of Useful. All rights reserved.</copyright>
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
 	<authorEmail>eoin@squareballoon.co.uk</authorEmail>
-	<authorUrl>www.squareballoon.co.uk</authorUrl>
-	<version>1.0.1</version>
+	<authorUrl>https://kindofuseful.com</authorUrl>
+	<version>1.0.3</version>
 	<description>MOD_ADMIN_CHAT_WHATSAPP_XML_DESCRIPTION</description>
-	<namespace path="src">CodeAlongJug\Module\AdminChatWhatsapp</namespace>
-    <updateservers>
-        <server type="extension" priority="1" name="Admin WhatsApp Chat updates">https://kindofuseful.com/index.php/component/swjprojects/jupdate?element=mod_admin_whatsapp_chat</server>
-    </updateservers>
-    <changelogurl>https://kindofuseful.com/index.php/component/swjprojects/jchangelog?element=mod_admin_whatsapp_chat</changelogurl>
+	<namespace path="src">KindOfUseful\Module\AdminChatWhatsapp</namespace>
+	<scriptfile>script.php</scriptfile>
+	<updateservers>
+		<server type="extension" priority="1" name="KOU Admin WhatsApp Chat">https://kindofuseful.com/index.php?option=com_ars&amp;view=update&amp;task=stream&amp;format=xml&amp;id=2</server>
+	</updateservers>
 	<files>
 		<folder module="mod_admin_chat_whatsapp">services</folder>
 		<folder>src</folder>
 		<folder>tmpl</folder>
+		<folder>language</folder>
 	</files>
 	<languages>
 		<language tag="en-GB">language/en-GB/mod_admin_chat_whatsapp.ini</language>
@@ -27,18 +28,16 @@
 		<fields name="params">
 			<fieldset name="basic">
                 <field
-                    name="warningnote" 
-                    type="note" 
-                    default="" 
-                    label="MOD_ADMIN_CHAT_WHATSAPP_FIELD_WARNINGNOTE" 
-                    description=""
+                    name="warningnote"
+                    type="note"
+                    label="MOD_ADMIN_CHAT_WHATSAPP_FIELD_WARNINGNOTE"
                 />
-                <field 
-                        name="businessorpersonal" 
-                        type="radio" 
-                        default="0" 
-                        label="Select an option" 
-                        description=""
+                <field
+                        name="businessorpersonal"
+                        type="radio"
+                        default="0"
+                        label="MOD_ADMIN_CHAT_WHATSAPP_FIELD_BUSINESS_OR_PERSONAL"
+                        description="MOD_ADMIN_CHAT_WHATSAPP_FIELD_BUSINESS_OR_PERSONAL_DESC"
                         layout="joomla.form.field.radio.switcher"
                         >
                         <option value="0">MOD_ADMIN_CHAT_WHATSAPP_FIELD_BUSINESS_OR_PERSONAL_BUSINESS</option>
@@ -51,7 +50,7 @@
                     description="MOD_ADMIN_CHAT_WHATSAPP_FIELD_COUNTRYCODE_DESC"
 					layout="joomla.form.field.list-fancy-select"
                 >
-                    <option value="">Please select a country code</option>
+                    <option value="">MOD_ADMIN_CHAT_WHATSAPP_FIELD_COUNTRYCODE_SELECT</option>
                     <option value="1">United States (+1)</option>
                     <option value="44">United Kingdom (+44)</option>
                     <option value="91">India (+91)</option>
@@ -263,13 +262,15 @@
 					type="text"
 					label="MOD_ADMIN_CHAT_WHATSAPP_FIELD_PHONENUMBER_LABEL"
 					description="MOD_ADMIN_CHAT_WHATSAPP_FIELD_PHONENUMBER_DESC"
+					filter="string"
 				/>
 				<field
 					name="prefilledtext"
 					type="text"
 					label="MOD_ADMIN_CHAT_WHATSAPP_FIELD_PREFILLEDTEXT_LABEL"
 					description="MOD_ADMIN_CHAT_WHATSAPP_FIELD_PREFILLEDTEXT_DESC"
-                    default="MOD_ADMIN_CHAT_WHATSAPP_PREFILLED_TEXT_DEFAULT"
+                    hint="MOD_ADMIN_CHAT_WHATSAPP_PREFILLED_TEXT_DEFAULT"
+                    filter="string"
                     showon="businessorpersonal:0"
 				/>
 			</fieldset>

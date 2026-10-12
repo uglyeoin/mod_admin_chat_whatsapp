@@ -1,0 +1,18 @@
+# Changelog
+
+## 1.0.3 (October 2026)
+
+- Fixed: the opening message was never sent to WhatsApp.
+- Fixed: the default message was saved as a raw language key. Existing modules are cleaned up on update.
+- Fixed: a link could be built from only a country code or only a number.
+- Fixed: setting descriptions were missing (mismatched language keys).
+- Updates now come from kindofuseful.com through the Joomla updater (the old update address no longer works).
+- Requires Joomla 5.0+ and PHP 8.1+.
+
+## 1.0.2 (July 2025)
+
+- Released online; updated namespace.
+
+## 1.0.1
+
+- First release.

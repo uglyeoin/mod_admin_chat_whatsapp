@@ -1,10 +1,9 @@
 <?php
 
 /**
- * @package     Joomla.Administrator
- * @subpackage  mod_admin_chat_whatsapp
+ * @package     KindOfUseful.Module.AdminChatWhatsapp
  *
- * @copyright   (C) 2024 Open Source Matters, Inc. <https://www.joomla.org>
+ * @copyright   (C) 2025-2026 Kind of Useful. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -15,25 +14,10 @@ use Joomla\CMS\Extension\Service\Provider\ModuleDispatcherFactory;
 use Joomla\DI\Container;
 use Joomla\DI\ServiceProviderInterface;
 
-/**
- * The title module service provider.
- *
- * @since  5.1.0
- */
 return new class () implements ServiceProviderInterface {
-    /**
-     * Registers the service provider with a DI container.
-     *
-     * @param   Container  $container  The DI container.
-     *
-     * @return  void
-     *
-     * @since   5.1.0
-     */
-    public function register(Container $container)
+    public function register(Container $container): void
     {
-        $container->registerServiceProvider(new ModuleDispatcherFactory('\\CodeAlongJug\\Module\\AdminChatWhatsapp'));
-
+        $container->registerServiceProvider(new ModuleDispatcherFactory('\\KindOfUseful\\Module\\AdminChatWhatsapp'));
         $container->registerServiceProvider(new Module());
     }
 };
